@@ -1,0 +1,29 @@
+var fib = [1,2];
+
+var i = 0;
+while (i<400) {
+    var a = fib.length-1;
+    var b = fib[a];
+    var c = fib.length-2;
+    var d = fib[c];
+    var e= b+d;
+    if (e<4000000){
+        fib.push(e);
+    }
+    i++;
+}
+
+var dingo =[];
+for (var i=0; i<fib.length;i++) {
+    if (fib[i]%2 === 0){
+        dingo.push(fib[i]);
+    }
+}
+console.log(dingo);
+
+var result =0;
+for(var i=0; i<dingo.length;i++) {
+   
+    result += dingo[i];
+    console.log(result);
+}
