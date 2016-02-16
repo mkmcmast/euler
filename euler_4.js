@@ -38,3 +38,31 @@ for (var i=999; i>=100; i--) {
     }
 }
 console.log(Math.max(...balls));
+
+// or as a function
+
+function multiply(num1, num2) {
+    return num1*num2;
+}
+function reverse(s){
+    return s.split("").reverse().join("");
+}
+
+function palin() {
+    var balls=[];
+for (var b=999; b>100; b--) {
+
+for (var i=999; i>=100; i--) {
+    var product=multiply(b,i);
+    var dingo =product.toString();
+    var dog = reverse(dingo);;
+        if (dingo === dog) {
+            
+            balls.push(dingo);
+        } 
+    }
+}
+return Math.max(...balls);
+}
+
+palin();
